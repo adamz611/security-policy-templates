@@ -6,7 +6,7 @@ jobs:
     name: Publish to JupiterOne
     steps:
     - name: Install Policy Builder
-      run: npm install -g @jupiterone/security-policy-builder
+      run: npm install @jupiterone/security-policy-builder
     - name: publish
-      run: psp publish -c config.json -t templates -a $J1_ACCOUNT_ID -k $J1_API_TOKEN -n
+      run: ./node_modules/@jupiterone/security-policy-builder/bin/psp publish -c config.json -t templates -a $J1_ACCOUNT_ID -k $J1_API_TOKEN -n
       
