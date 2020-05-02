@@ -2,13 +2,9 @@ name: Publish to JupiterOne
 on: [push, pull_request]
 jobs:
   release:
-    needs: test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
-    strategy:
-      fail-fast: false
-      matrix:
-        node: [12]
+
     steps:
       - name: Setup Node
         uses: actions/setup-node@v1
