@@ -6,7 +6,7 @@ jobs:
     name: Publish to JupiterOne
     steps:
     - name: LS
-      run: pwd; ls .
+      run: ls -la
     - name: Install Policy Builder
       run: npm install @jupiterone/security-policy-builder
     - name: publish
