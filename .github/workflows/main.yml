@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 2
       - name: Install policy-builder
-        run: yarn install @jupiterone/security-policy-builder
+        run: yarn add @jupiterone/security-policy-builder
       - name: Publish to J1
         env:
           J1_ACCOUNT_ID: ${{ secrets.J1_ACCOUNT_ID }}
